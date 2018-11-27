@@ -70,11 +70,19 @@ resource "aws_cloudfront_distribution" "main" {
     max_ttl                = "${var.ttl_max}"
   }
 
+  # restrictions {
+  #   geo_restriction {
+  #     restriction_type = "none"
+  #   }
+  # }
+
   restrictions {
     geo_restriction {
-      restriction_type = "none"
+      restriction_type = "whitelist"
+      locations        = ["US"]
     }
   }
+
 
   viewer_certificate {
     acm_certificate_arn      = "${var.ssl_certificate_arn}"
