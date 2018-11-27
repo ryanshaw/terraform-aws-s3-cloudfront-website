@@ -45,19 +45,19 @@ variable routing_rules {
 }
 
 variable ttl_min {
-  type = "integer"
+  type = "string"
   description = "Minimum TTL for Cloudfront"
   default= 0
 }
 
 variable ttl_default {
-  type = "integer"
+  type = "string"
   description = "Default TTL for Cloudfront"
   default = 300
 }
 
 variable ttl_max {
-  type = "integer"
+  type = "string"
   description = "Maximum TTL for Cloudfront"
   default = 1200
 }
