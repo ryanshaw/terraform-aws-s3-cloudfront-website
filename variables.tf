@@ -44,6 +44,24 @@ variable routing_rules {
   default     = ""
 }
 
+variable ttl_min {
+  type = "integer"
+  description = "Minimum TTL for Cloudfront"
+  default= 0
+}
+
+variable ttl_default {
+  type = "integer"
+  description = "Default TTL for Cloudfront"
+  default = 300
+}
+
+variable ttl_max {
+  type = "integer"
+  description = "Maximum TTL for Cloudfront"
+  default = 1200
+}
+
 variable index_document {
   type        = "string"
   description = "HTML to show at root"
